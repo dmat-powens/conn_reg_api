@@ -1,0 +1,57 @@
+[project]
+name = "con-reg-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.11",
+    "python-dateutil>=2.9.0.post0",
+    "ruff>=0.9.10",
+]
+
+[tool.ruff]
+# Enable all linting rules
+lint.select = [
+    # "ALL"
+    "I", # isort
+    ]
+lint.ignore = []
+# Enable autofix for formatting issues
+fix = true
+# Specify the line length for formatting
+line-length = 100
+# Exclude specific files or directories
+exclude = [
+    # "migrations",
+    # "tests",
+    # "venv",
+    # ".venv",
+    # "build",
+    # "dist",
+    # "*.pyc",
+    # "__pycache__",
+    # ".git",
+    # ".tox",
+    # ".nox",
+    # ".eggs",
+    # "*.egg-info",
+    # ".mypy_cache",
+    # ".pytest_cache",
+    # ".hypothesis",
+    # ".vscode",
+    # ".idea",
+    # ".coverage",
+    # "coverage.xml",
+    # "*.cover",
+    # "*.log",
+    # "pip-wheel-metadata",
+    # "htmlcov",
+    # "tox.ini",
+    # "setup.py",
+    # "setup.cfg",
+    # "pyproject.toml",
+    # "Makefile",
+    # "Dockerfile",
+    # "docker-compose.yml",
+]

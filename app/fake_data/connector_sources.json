@@ -1,0 +1,54 @@
+[
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174000",
+        "name": "openapi",
+        "priority": 0,
+        "sync_periodicity": null,
+        "auth_mechanism": "webauth",
+        "unavailable_capabilities": "transfer",
+        "unavailable": "2024-07-20 11:05:45",
+        "stability": {
+            "status": "stable",
+            "last_update": "2025-03-10 14:00:25"
+        }
+    },
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174000",
+        "name": "directaccess",
+        "priority": 2,
+        "sync_periodicity": 30,
+        "auth_mechanism": "credentials",
+        "unavailable_capabilities": "bank,profile",
+        "unavailable": null,
+        "stability": {
+            "status": "unstable",
+            "last_update": "2025-03-08 11:00:25"
+        }
+    },
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174001",
+        "name": "openapi",
+        "priority": 0,
+        "sync_periodicity": null,
+        "auth_mechanism": "webauth",
+        "unavailable_capabilities": null,
+        "unavailable": null,
+        "stability": {
+            "status": "stable",
+            "last_update": "2025-04-10 18:37:39"
+        }
+    },
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174001",
+        "name": "fallback",
+        "priority": 1,
+        "sync_periodicity": 30,
+        "auth_mechanism": null,
+        "unavailable_capabilities": "document",
+        "unavailable": "2024-07-20 11:05:45",
+        "stability": {
+            "status": "stable",
+            "last_update": "2025-03-24 12:39:53"
+        }
+    }
+]
