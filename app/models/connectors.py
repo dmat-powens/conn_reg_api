@@ -15,27 +15,27 @@ class Connector(BaseModel):
         title="Connector UUID",
         description="The unique identifier for the connector",
     )
-    hidden: bool = Field(
-        ...,
-        title="Connector hidden property",
-        description="Whether the connector is hidden or not",
-    )
+    # hidden: bool = Field(
+    #     ...,
+    #     title="Connector hidden property",
+    #     description="Whether the connector is hidden or not",
+    # )
     # Can be = 0 in clients API, but not at bi_connector level, which means trying to get the maximum months possible.
     # In ConReg API, it is not possible to set months_to_fetch = 0.
     # TODO: check nullity
-    months_to_fetch: PositiveInt | None = Field(
-        ...,
-        title="Connector months_to_fetch value",
-        description="Number of months of history retrieved during synchronization",
-        le=24,
-    )
+    # months_to_fetch: PositiveInt | None = Field(
+    #     ...,
+    #     title="Connector months_to_fetch value",
+    #     description="Number of months of history retrieved during synchronization",
+    #     le=24,
+    # )
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
                 "uuid": "123e4567-e89b-12d3-a456-426614174000",
-                "hidden": False,
-                "months_to_fetch": 0,
+                # "hidden": False,
+                # "months_to_fetch": 0,
             }
         }
     )
@@ -85,13 +85,13 @@ class ConnectorsList(BaseModel):
                 "connectors": [
                     {
                         "uuid": "123e4567-e89b-12d3-a456-426614174000",
-                        "hidden": False,
-                        "months_to_fetch": 24,
+                        # "hidden": False,
+                        # "months_to_fetch": 24,
                     },
                     {
                         "uuid": "123e4567-e89b-12d3-a456-426614174001",
-                        "months_to_fetch": 3,
-                        "hidden": True,
+                        # "months_to_fetch": 3,
+                        # "hidden": True,
                     },
                 ]
             }

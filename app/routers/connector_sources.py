@@ -33,16 +33,16 @@ def update_connector_sources(
         existing_source = get_connector_source_by_uuid_connector_and_name(
             uuid_connector, source_update.name
         )
-        if source_update.priority is not None:
-            existing_source.priority = source_update.priority
+        # if source_update.priority is not None:
+        #     existing_source.priority = source_update.priority
         if source_update.unavailable is not None:
             existing_source.unavailable = source_update.unavailable
-        if source_update.unavailable_capabilities is not None:
-            existing_source.unavailable_capabilities = source_update.unavailable_capabilities
-        if source_update.auth_mechanism is not None:
-            existing_source.auth_mechanism = source_update.auth_mechanism
-        if source_update.sync_periodicity is not None:
-            existing_source.sync_periodicity = source_update.sync_periodicity
+        # if source_update.unavailable_capabilities is not None:
+        #     existing_source.unavailable_capabilities = source_update.unavailable_capabilities
+        # if source_update.auth_mechanism is not None:
+        #     existing_source.auth_mechanism = source_update.auth_mechanism
+        # if source_update.sync_periodicity is not None:
+        #     existing_source.sync_periodicity = source_update.sync_periodicity
         save_connector_source(existing_source)
         updated_sources.append(existing_source)
     return ConnectorSourcesList(sources=updated_sources)

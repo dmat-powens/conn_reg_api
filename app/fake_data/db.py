@@ -5,10 +5,12 @@ from pathlib import Path
 from fastapi import FastAPI
 from models.connector_sources import ConnectorSource
 from models.connectors import Connector
+from models.connectors_and_sources import ConnectorAndSources
 
 # DB placeholders for model objects
 CONNECTORS_DB = []
 CONNECTOR_SOURCES_DB = []
+CONNECTORS_AND_SOURCES_DB = []
 
 # other way to define the data
 # CONNECTOR_SOURCES_DB = [
@@ -28,20 +30,29 @@ CONNECTOR_SOURCES_DB = []
 # Load data on application startup
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    connectors_file_path = Path(__file__).parent / "connectors.json"
-    with connectors_file_path.open() as f:
-        fake_connectors_data = json.load(f)
+    # connectors_file_path = Path(__file__).parent / "connectors.json"
+    # with connectors_file_path.open() as f:
+    #     fake_connectors_data = json.load(f)
 
-    for connector in fake_connectors_data:
-        CONNECTORS_DB.append(Connector.parse_obj(connector))
-    print("\n\n\t\t>>>>>> Connectors data loaded successfully!\n\n")
+    # for connector in fake_connectors_data:
+    #     CONNECTORS_DB.append(Connector.parse_obj(connector))
+    # print("\n\n\t\t>>>>>> Connectors data loaded successfully!\n\n")
 
-    connector_sources_file_path = Path(__file__).parent / "connector_sources.json"
-    with connector_sources_file_path.open() as f:
-        fake_connector_sources_data = json.load(f)
+    # connector_sources_file_path = Path(__file__).parent / "connector_sources.json"
+    # with connector_sources_file_path.open() as f:
+    #     fake_connector_sources_data = json.load(f)
 
-    for source in fake_connector_sources_data:
-        CONNECTOR_SOURCES_DB.append(ConnectorSource.parse_obj(source))
-    print("\n\n\t\t>>>>>> Connector sources data loaded successfully!\n\n")
+    # for source in fake_connector_sources_data:
+    #     CONNECTOR_SOURCES_DB.append(ConnectorSource.parse_obj(source))
+    # print("\n\n\t\t>>>>>> Connector sources data loaded successfully!\n\n")
+
+    connectors_and_sources_file_path = Path(__file__).parent / "connectors_and_sources.json"
+    with connectors_and_sources_file_path.open() as f:
+        fake_connectors_and_sources_data = json.load(f)
+
+    for con in fake_connectors_and_sources_data:
+        CONNECTORS_AND_SOURCES_DB.append(ConnectorAndSources.parse_obj(con))
+    print("\n\n\t\t>>>>>> Connectors and sources data loaded successfully!\n\n")
+    # print(CONNECTORS_AND_SOURCES_DB)
 
     yield
