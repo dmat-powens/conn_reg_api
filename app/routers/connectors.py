@@ -12,32 +12,32 @@ def retrieve_connectors() -> ConnectorsList:
     return ConnectorsList(connectors=CONNECTORS_DB)
 
 
-# @router.patch("", response_model=ConnectorsList)
-# def update_connectors(connectors_update: ConnectorsUpdate) -> ConnectorsList:
-#     updated_connectors = []
-#     for connector_update in connectors_update.connectors:
-#         existing_connector = get_connector_by_uuid(connector_update.uuid)
-#         if connector_update.months_to_fetch is not None:
-#             existing_connector.months_to_fetch = connector_update.months_to_fetch
-#         if connector_update.hidden is not None:
-#             existing_connector.hidden = connector_update.hidden
-#         save_connector(existing_connector)
-#         updated_connectors.append(existing_connector)
-#     return ConnectorsList(connectors=updated_connectors)
+@router.patch("", response_model=ConnectorsList)
+def update_connectors(connectors_update: ConnectorsUpdate) -> ConnectorsList:
+    updated_connectors = []
+    for connector_update in connectors_update.connectors:
+        existing_connector = get_connector_by_uuid(connector_update.uuid)
+        if connector_update.months_to_fetch is not None:
+            existing_connector.months_to_fetch = connector_update.months_to_fetch
+        if connector_update.hidden is not None:
+            existing_connector.hidden = connector_update.hidden
+        save_connector(existing_connector)
+        updated_connectors.append(existing_connector)
+    return ConnectorsList(connectors=updated_connectors)
 
 
-# def get_connector_by_uuid(uuid: UUID) -> Connector:
-#     for connector in CONNECTORS_DB:
-#         if connector.uuid == uuid:
-#             return connector
-#     raise HTTPException(status_code=404, detail="Connector not found")
+def get_connector_by_uuid(uuid: UUID) -> Connector:
+    for connector in CONNECTORS_DB:
+        if connector.uuid == uuid:
+            return connector
+    raise HTTPException(status_code=404, detail="Connector not found")
 
 
-# def save_connector(updated_connector: Connector):
-#     for i, connector in enumerate(CONNECTORS_DB):
-#         if connector.uuid == updated_connector.uuid:
-#             CONNECTORS_DB[i] = updated_connector
-#             break
+def save_connector(updated_connector: Connector):
+    for i, connector in enumerate(CONNECTORS_DB):
+        if connector.uuid == updated_connector.uuid:
+            CONNECTORS_DB[i] = updated_connector
+            break
 
 
 """

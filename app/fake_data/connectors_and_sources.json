@@ -40,5 +40,110 @@
                 }
             }
         ]
+    },
+    {
+        "uuid": "123e4567-e89b-12d3-a456-426614174002",
+        "sources": [
+            {
+                "name": "openapi",
+                "available": false,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-04-10 18:37:39"
+                }
+            },
+            {
+                "name": "fallback",
+                "available": true,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-03-24 12:39:53"
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "123e4567-e89b-12d3-a456-426614174003",
+        "sources": [
+            {
+                "name": "openapi",
+                "available": false,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-04-10 18:37:39"
+                }
+            },
+            {
+                "name": "fallback",
+                "available": true,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-03-24 12:39:53"
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "123e4567-e89b-12d3-a456-426614174004",
+        "sources": [
+            {
+                "name": "openapi",
+                "available": false,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-04-10 18:37:39"
+                }
+            },
+            {
+                "name": "fallback",
+                "available": true,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-03-24 12:39:53"
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "123e4567-e89b-12d3-a456-426614174005",
+        "sources": [
+            {
+                "name": "openapi",
+                "available": false,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-04-10 18:37:39"
+                }
+            },
+            {
+                "name": "fallback",
+                "available": true,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-03-24 12:39:53"
+                }
+            }
+        ]
+    },
+    {
+        "uuid": "123e4567-e89b-12d3-a456-426614174006",
+        "sources": [
+            {
+                "name": "openapi",
+                "available": false,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-04-10 18:37:39"
+                }
+            },
+            {
+                "name": "fallback",
+                "available": true,
+                "stability": {
+                    "status": "stable",
+                    "last_update": "2025-03-24 12:39:53"
+                }
+            }
+        ]
     }
 ]

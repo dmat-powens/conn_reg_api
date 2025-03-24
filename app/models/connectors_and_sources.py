@@ -16,37 +16,37 @@ class NameEnum(str, Enum):
     DIRECTACCESS = "directaccess"
 
 
-class StatusEnum(str, Enum):
-    STABLE = "stable"
-    UNSTABLE = "unstable"
-    DOWN = "down"
-    UNKNOWN = "unknown"
+# class StatusEnum(str, Enum):
+#     STABLE = "stable"
+#     UNSTABLE = "unstable"
+#     DOWN = "down"
+#     UNKNOWN = "unknown"
 
 
-class Stability(BaseModel):
-    status: StatusEnum = Field(
-        StatusEnum.UNKNOWN,
-        title="Status",
-        description="The status of the connector",
-    )
-    # TODO: check nullability
-    last_update: str = Field(
-        ...,
-        title="Last update",
-        description="The date and time of the last update of the connector (format: YYYY-MM-DD HH:MM:SS)",
-        pattern=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$",
-    )
+# class Stability(BaseModel):
+#     status: StatusEnum = Field(
+#         StatusEnum.UNKNOWN,
+#         title="Status",
+#         description="The status of the connector",
+#     )
+#     # TODO: check nullability
+#     last_update: str = Field(
+#         ...,
+#         title="Last update",
+#         description="The date and time of the last update of the connector (format: YYYY-MM-DD HH:MM:SS)",
+#         pattern=r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$",
+#     )
 
-    model_config = ConfigDict(
-        json_schema_extra={
-            "example": {
-                "stability": {
-                    "status": "stable",
-                    "last_update": "2025-03-10 14:00:25",
-                }
-            }
-        }
-    )
+#     model_config = ConfigDict(
+#         json_schema_extra={
+#             "example": {
+#                 "stability": {
+#                     "status": "stable",
+#                     "last_update": "2025-03-10 14:00:25",
+#                 }
+#             }
+#         }
+#     )
 
 
 class ConnectorSource(BaseModel):
@@ -60,18 +60,18 @@ class ConnectorSource(BaseModel):
         title="Available",
         description="Whether the source is set as available or not",
     )
-    stability: Stability = Field(
-        ...,
-        title="Connector stability",
-        description="The stability of the connector, compounded to the worst stability of the enabled connector sources.",
-    )
+    # stability: Stability = Field(
+    #     ...,
+    #     title="Connector stability",
+    #     description="The stability of the connector, compounded to the worst stability of the enabled connector sources.",
+    # )
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
                 "name": "openapi",
                 "available": False,
-                "stability": {"status": "stable", "last_update": "2025-03-10 14:00:25"},
+                # "stability": {"status": "stable", "last_update": "2025-03-10 14:00:25"},
             }
         }
     )
@@ -97,18 +97,18 @@ class ConnectorAndSources(BaseModel):
                     {
                         "name": "openapi",
                         "available": True,
-                        "stability": {
-                            "status": "stable",
-                            "last_update": "2025-03-10 14:00:25",
-                        },
+                        # "stability": {
+                        #     "status": "stable",
+                        #     "last_update": "2025-03-10 14:00:25",
+                        # },
                     },
                     {
                         "name": "directaccess",
                         "available": True,
-                        "stability": {
-                            "status": "unstable",
-                            "last_update": "2025-03-08 11:00:25",
-                        },
+                        # "stability": {
+                        #     "status": "unstable",
+                        #     "last_update": "2025-03-08 11:00:25",
+                        # },
                     },
                 ],
             }
@@ -131,18 +131,18 @@ class ConnectorsAndSourcesList(BaseModel):
                             {
                                 "name": "openapi",
                                 "available": True,
-                                "stability": {
-                                    "status": "stable",
-                                    "last_update": "2025-03-10 14:00:25",
-                                },
+                                # "stability": {
+                                #     "status": "stable",
+                                #     "last_update": "2025-03-10 14:00:25",
+                                # },
                             },
                             {
                                 "name": "directaccess",
                                 "available": True,
-                                "stability": {
-                                    "status": "unstable",
-                                    "last_update": "2025-03-08 11:00:25",
-                                },
+                                # "stability": {
+                                #     "status": "unstable",
+                                #     "last_update": "2025-03-08 11:00:25",
+                                # },
                             },
                         ],
                     },
@@ -152,18 +152,18 @@ class ConnectorsAndSourcesList(BaseModel):
                             {
                                 "name": "openapi",
                                 "available": False,
-                                "stability": {
-                                    "status": "stable",
-                                    "last_update": "2025-04-10 18:37:39",
-                                },
+                                # "stability": {
+                                #     "status": "stable",
+                                #     "last_update": "2025-04-10 18:37:39",
+                                # },
                             },
                             {
                                 "name": "fallback",
                                 "available": True,
-                                "stability": {
-                                    "status": "stable",
-                                    "last_update": "2025-03-24 12:39:53",
-                                },
+                                # "stability": {
+                                #     "status": "stable",
+                                #     "last_update": "2025-03-24 12:39:53",
+                                # },
                             },
                         ],
                     },
