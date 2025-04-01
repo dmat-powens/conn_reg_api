@@ -3,7 +3,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174000",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "openapi",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -11,7 +12,8 @@
                 }
             },
             {
-                "name": "directaccess",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f001",
+                "type": "directaccess",
                 "available": true,
                 "stability": {
                     "status": "unstable",
@@ -24,7 +26,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174001",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -32,7 +35,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -45,7 +49,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174002",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -53,7 +58,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -66,7 +72,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174003",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -74,7 +81,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f001",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -87,7 +95,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174004",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f002",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -95,7 +104,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f003",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -108,7 +118,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174005",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -116,7 +127,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f005",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",
@@ -129,7 +141,8 @@
         "uuid": "123e4567-e89b-12d3-a456-426614174006",
         "sources": [
             {
-                "name": "openapi",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f006",
+                "type": "openapi",
                 "available": false,
                 "stability": {
                     "status": "stable",
@@ -137,7 +150,8 @@
                 }
             },
             {
-                "name": "fallback",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f007",
+                "type": "fallback",
                 "available": true,
                 "stability": {
                     "status": "stable",

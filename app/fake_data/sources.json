@@ -1,0 +1,56 @@
+[
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174000",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+        "type": "openapi",
+        "available": false
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174000",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f005",
+        "type": "directaccess",
+        "available": false
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174001",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f006",
+        "type": "openapi",
+        "available": false
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174001",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f001",
+        "type": "fallback",
+        "available": true
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174002",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+        "type": "openapi",
+        "available": false
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174002",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f001",
+        "type": "fallback",
+        "available": true
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174003",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f000",
+        "type": "openapi",
+        "available": false
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174003",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f001",
+        "type": "fallback",
+        "available": true
+    },
+    {
+        "connector_uuid": "123e4567-e89b-12d3-a456-426614174003",
+        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f002",
+        "type": "directaccess",
+        "available": true
+    }
+]

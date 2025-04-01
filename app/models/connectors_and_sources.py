@@ -10,7 +10,7 @@ from pydantic import (
 )
 
 
-class NameEnum(str, Enum):
+class TypeEnum(str, Enum):
     OPENAPI = "openapi"
     FALLBACK = "fallback"
     DIRECTACCESS = "directaccess"
@@ -50,10 +50,21 @@ class NameEnum(str, Enum):
 
 
 class ConnectorSource(BaseModel):
-    name: NameEnum = Field(
+    connector_uuid: UUID = Field(
         ...,
-        title="Connector source name",
-        description="The type name of the connector source",
+        title="Connector UUID",
+        description="The unique identifier for the connector",
+        exclude=True,
+    )
+    uuid: UUID = Field(
+        ...,
+        title="Connector source UUID",
+        description="The unique identifier for the connector source",
+    )
+    type: TypeEnum = Field(
+        ...,
+        title="Connector source type",
+        description="The type of the connector source",
     )
     available: bool = Field(
         ...,
@@ -69,7 +80,9 @@ class ConnectorSource(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "name": "openapi",
+                "connector_uuid": "123e4567-e89b-12d3-a456-426614174000",
+                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+                "type": "openapi",
                 "available": False,
                 # "stability": {"status": "stable", "last_update": "2025-03-10 14:00:25"},
             }
@@ -95,7 +108,8 @@ class ConnectorAndSources(BaseModel):
                 "uuid": "123e4567-e89b-12d3-a456-426614174000",
                 "sources": [
                     {
-                        "name": "openapi",
+                        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+                        "type": "openapi",
                         "available": True,
                         # "stability": {
                         #     "status": "stable",
@@ -103,7 +117,8 @@ class ConnectorAndSources(BaseModel):
                         # },
                     },
                     {
-                        "name": "directaccess",
+                        "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f005",
+                        "type": "directaccess",
                         "available": True,
                         # "stability": {
                         #     "status": "unstable",
@@ -129,7 +144,8 @@ class ConnectorsAndSourcesList(BaseModel):
                         "uuid": "123e4567-e89b-12d3-a456-426614174000",
                         "sources": [
                             {
-                                "name": "openapi",
+                                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+                                "type": "openapi",
                                 "available": True,
                                 # "stability": {
                                 #     "status": "stable",
@@ -137,7 +153,8 @@ class ConnectorsAndSourcesList(BaseModel):
                                 # },
                             },
                             {
-                                "name": "directaccess",
+                                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f003",
+                                "type": "directaccess",
                                 "available": True,
                                 # "stability": {
                                 #     "status": "unstable",
@@ -150,7 +167,8 @@ class ConnectorsAndSourcesList(BaseModel):
                         "uuid": "123e4567-e89b-12d3-a456-426614174001",
                         "sources": [
                             {
-                                "name": "openapi",
+                                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f004",
+                                "type": "openapi",
                                 "available": False,
                                 # "stability": {
                                 #     "status": "stable",
@@ -158,7 +176,8 @@ class ConnectorsAndSourcesList(BaseModel):
                                 # },
                             },
                             {
-                                "name": "fallback",
+                                "uuid": "eb4bbb24-0ef2-11f0-ae6f-429fb861f002",
+                                "type": "fallback",
                                 "available": True,
                                 # "stability": {
                                 #     "status": "stable",
@@ -174,10 +193,15 @@ class ConnectorsAndSourcesList(BaseModel):
 
 
 class ConnectorSourceUpdate(BaseModel):
-    name: NameEnum = Field(
+    type: TypeEnum = Field(
         ...,
-        title="Connector source name",
-        description="The type name of the connector source",
+        title="Connector source type",
+        description="The type of the connector source",
+    )
+    uuid: UUID = Field(
+        ...,
+        title="Connector source UUID",
+        description="The unique identifier for the connector source",
     )
     available: bool = Field(
         ...,

@@ -34,5 +34,23 @@
             "status": "stable",
             "last_update": "2025-03-24 12:39:53"
         }
+    },
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174001",
+        "name": "openapi",
+        "unavailable": false,
+        "stability": {
+            "status": "stable",
+            "last_update": "2025-04-10 18:37:39"
+        }
+    },
+    {
+        "uuid_connector": "123e4567-e89b-12d3-a456-426614174001",
+        "name": "fallback",
+        "unavailable": true,
+        "stability": {
+            "status": "stable",
+            "last_update": "2025-03-24 12:39:53"
+        }
     }
 ]
